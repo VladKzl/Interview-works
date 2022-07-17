@@ -5,7 +5,7 @@ namespace Service.Contracts
 {
     public interface IUserStatisticsService
     {
-        Task<JsonResult> GetUserStatisticsByQueryIdAsync
+        Task<string> GetUserStatisticsByQueryIdAsync
         (Guid queryId, bool trackChanges);
         Task<Guid> CreateUserStatisticsAsync(CreateUserStatisticsDto userStatistics);
 /*        Task DeleteUserStatisticsAsync(Guid companyId, bool trackChanges);

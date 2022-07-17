@@ -33,8 +33,8 @@ namespace UserStatistics.Extensions
                 .Build());
         public static void ConfigureServiceManager(this IServiceCollection services) =>
         services.AddScoped<IServiceManager, ServiceManager>();
-        public static void ConfigureSqlContext(this IServiceCollection services, 
-        IConfiguration configuration) =>
+        public static void ConfigureSqlContext(this IServiceCollection services,
+        IConfigurationRoot configuration) =>
         services.AddDbContext<RepositoryContext>(opts =>
         opts.UseSqlServer(configuration.GetConnectionString("sqlConnection")), ServiceLifetime.Singleton);
 

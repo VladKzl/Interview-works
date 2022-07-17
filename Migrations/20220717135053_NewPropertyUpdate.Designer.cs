@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UserStatistics.Repository;
 
@@ -11,9 +12,10 @@ using UserStatistics.Repository;
 namespace UserStatistics.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20220717135053_NewPropertyUpdate")]
+    partial class NewPropertyUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,24 +46,24 @@ namespace UserStatistics.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c5a67a4c-c788-4b1b-ac4a-485b23e9c7b9"),
+                            Id = new Guid("0dbb3717-2247-4cba-bc15-7301a0db61ed"),
                             CountSignIn = 12,
                             Persentage = 0,
-                            UserId = new Guid("31c4b5c9-8420-4705-acef-ec5723bc97e1")
+                            UserId = new Guid("46b8f8c0-c862-4eba-8aa5-00aaad88956f")
                         },
                         new
                         {
-                            Id = new Guid("9417ecd5-ed64-45c1-b94b-221670dd3e24"),
+                            Id = new Guid("4cfa3be9-0092-4303-8eb3-9c8517e4fd12"),
                             CountSignIn = 8,
                             Persentage = 0,
-                            UserId = new Guid("b2b17a85-0b06-4ef3-9f73-2b3f5cb7108a")
+                            UserId = new Guid("c9e65435-3d16-4dd1-a2be-a0e752accf3a")
                         },
                         new
                         {
-                            Id = new Guid("4863267b-cdef-43ca-9552-638d5151d7e0"),
+                            Id = new Guid("952b6c51-3c62-4e6e-b37b-6d4d45c39207"),
                             CountSignIn = 2,
                             Persentage = 0,
-                            UserId = new Guid("b3897378-089b-4d28-9867-1caaef236ca2")
+                            UserId = new Guid("5746db32-ed0c-48a4-bae5-0df5783ea60e")
                         });
                 });
 #pragma warning restore 612, 618

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8Jv4pUWG0YFgTeGnlg0qt+C8gESUCyKJ+UdlnBmxB54KoZNucyuMiBQSiDhk92PDRuEYh89yL9YpMmFuKph/qQ==",
+  "dgSpecHash": "7yUI38a0U1cA+BJq/uRL64hs1yNN4APQsDm4jNDu+rHn66PN+x/DT41USts4Dw2lyddIUFBz+diT4ujJk4ajJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Обучение\\ASP.NET\\Проекты\\Тестовый 2\\UserStatistics\\UserStatistics.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Обучение\\ASP.NET\\Проекты\\review\\UserStatistics\\Review\\UserStatistics.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.6\\microsoft.aspnetcore.jsonpatch.6.0.6.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.6\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.6.nupkg.sha512",

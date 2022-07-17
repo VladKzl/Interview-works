@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CompanyEmployees.ActionFilters;
+using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
 using UserStatistics.Shared.DataTransferObjects;
 
 namespace UserStatistics.Controllers
 {
-    [Route("api/report")]
+    [Route("report")]
     [ApiController]
     public class ReportController : ControllerBase
     {
@@ -19,26 +20,12 @@ namespace UserStatistics.Controllers
                 (queryId, false);
             return Ok(userStatistics);
         }
-        [HttpPost("user_statistics/{id}")]
+        [HttpPost("user_statistics/{id}")] // id не нужно, но без параметра не работает...
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateUserStatistics([FromBody] CreateUserStatisticsDto userStatistics)
         {
             var queryId = await service.UserStatisticsService.CreateUserStatisticsAsync(userStatistics);
             return CreatedAtRoute("GetUserStatistics", new { queryId }, new { queryId });
         }
-/*        [HttpDelete("{id:guid}")]
-        public async Task<IActionResult> DeleteUserStatistics(Guid id)
-        {
-            await service.CompanyService.DeleteCompanyAsync(id, trackChanges: false);
-            return NoContent();
-        }
-        [HttpPut("{id:guid}")]
-        [ServiceFilter(typeof(ValidationFilterAttribute))]
-        public async Task<IActionResult> UpdateUserStatistics(Guid id, [FromBody] CompanyForUpdateDto
-        company)
-        {
-            await service.CompanyService.UpdateCompanyAsync(id, company, trackChanges:
-            true);
-            return NoContent();
-        }*/
     }
 }

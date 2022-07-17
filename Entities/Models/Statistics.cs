@@ -12,5 +12,6 @@ namespace UserStatistics.Entities.Models
         public Guid UserId { get; set; }
         [Required(ErrorMessage = "CountSignIn is a required field.")]
         public int CountSignIn { get; set; }
+        public int Persentage { get; set; } 
     }
 }
